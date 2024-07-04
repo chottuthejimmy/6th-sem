@@ -38,10 +38,10 @@ print("\nThe final Generalize output:")
 row = len(temp)
 col = len(temp)
 
-for i in range(row):
-    if temp[i][-1] == "no":
-        for j in range(col - 1):
-            if temp[i][j] != hypo[j]:
+for example in temp:
+    if example[-1] == "no":
+        for j in range (len(temp) - 1):
+            if example[j] != hypo[j]:
                 gen[j] = hypo[j]
                 print(gen)
                 gen[j] = '?'

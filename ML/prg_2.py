@@ -35,12 +35,9 @@ print(hypo)
 
 print("\nThe final Generalize output:")
 
-row = len(temp)
-col = len(temp)
-
 for example in temp:
     if example[-1] == "no":
-        for j in range (len(temp) - 1):
+        for j in range (len(example) - 1):
             if example[j] != hypo[j]:
                 gen[j] = hypo[j]
                 print(gen)

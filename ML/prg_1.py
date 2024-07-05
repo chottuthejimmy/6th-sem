@@ -1,5 +1,8 @@
-import csv
+# For a given set of training data examples stored in a .CSV file,
+# implement and demonstrate the Find-S algorithm to output a description of 
+# the set of all hypotheses consistent with the training examples.
 
+import csv
 
 data = []
 
@@ -31,4 +34,3 @@ for example in data[1:]:
 
 print("\nThe maximally specific Find-S hypo for the given training examples is:")
 print(hypo)
-

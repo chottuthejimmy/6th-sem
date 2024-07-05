@@ -22,21 +22,21 @@ hn = 3
 on = 1
 
 win = np.random.uniform(size=(inp, hn))
-bh = np.random.uniform(size=(1, hn))
+bin = np.random.uniform(size=(1, hn))
 wout = np.random.uniform(size=(hn, on))
-bo = np.random.uniform(size=(1, on))
+bout = np.random.uniform(size=(1, on))
 
 for epoch in range(epochs):
-    hin = np.dot(X, win) + bh
+    hin = np.dot(X, win) + bin
     hout = sigmoid(hin)
-    oin = np.dot(hout, wout) + bo
+    oin = np.dot(hout, wout) + bout
     pred = sigmoid(oin)
 
     eout = y - pred
     gout = sigmoid_gradient(pred)
     dout = eout * gout
 
-    eh = np.dot(dout, wout.T)
+    eh = np.dot(dout, wout.T) # wout.T is the transpose of wout
     gh = sigmoid_gradient(hout)
     dh = eh * gh
 

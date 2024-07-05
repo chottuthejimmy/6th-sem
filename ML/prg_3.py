@@ -24,15 +24,13 @@ def split_data(data, attr):
 
 def best_attribute(data):
     base_entropy = entropy(data)
-    gain = [(base_entropy - sum((len(subset) / len(data)) * entropy(subset) for subset in split_data(data, attr)), attr) 
-            for attr in range(len(data[0]) - 1)]
+    gain = [(base_entropy - sum((len(subset) / len(data)) * entropy(subset) for subset in split_data(data, attr)), attr) for attr in range(len(data[0]) - 1)]
     return max(gain)[1]
 
 def decision_tree(data, labels):
     outcomes = [row[-1] for row in data]
     if outcomes.count(outcomes[0]) == len(outcomes):
         return outcomes[0]
-    
     attr = best_attribute(data)
     tree = {labels[attr]: {}}
 

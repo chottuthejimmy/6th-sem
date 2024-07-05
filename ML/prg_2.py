@@ -7,7 +7,6 @@ import csv
 hypo = []
 data = []
 temp = []
-gen = ['?', '?', '?', '?', '?', '?']
 
 with open('enjoysport.csv') as csv_file:
     fd = csv.reader(csv_file)
@@ -18,11 +17,11 @@ with open('enjoysport.csv') as csv_file:
         if line[-1] == "yes":
             data.append(line)
 
-print("\nThe positive examples are: Enjoy swimming")
+gen = ['?' for _ in range(len(data[0]))]
+
+print("\nThe positive examples are: ")
 for example in data:
     print(example)
-
-print("\nThe final specific output:")
 
 hypo = data[0][:-1]
 
@@ -31,13 +30,13 @@ for example in data:
         if example[i] != hypo[i]:
             hypo[i] = '?'
             
-print(hypo)
+print(f"\nThe final specific output:\n{hypo}")
 
 print("\nThe final Generalize output:")
 
 for example in temp:
     if example[-1] == "no":
-        for j in range (len(example) - 1):
+        for j in range (len(hypo)):
             if example[j] != hypo[j]:
                 gen[j] = hypo[j]
                 print(gen)

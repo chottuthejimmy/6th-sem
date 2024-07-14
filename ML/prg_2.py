@@ -25,7 +25,7 @@ for example in data:
 
 hypo = data[0][:-1]
 
-for example in data:
+for example in data[1:]:
     for i in range(len(hypo)):
         if example[i] != hypo[i]:
             hypo[i] = '?'
@@ -36,8 +36,8 @@ print("\nThe final Generalize output:")
 
 for example in temp:
     if example[-1] == "no":
-        for j in range (len(hypo)):
-            if example[j] != hypo[j]:
-                gen[j] = hypo[j]
+        for i in range (len(hypo)):
+            if example[i] != hypo[i]:
+                gen[i] = hypo[i]
                 print(gen)
-                gen[j] = '?'
+                gen[i] = '?'

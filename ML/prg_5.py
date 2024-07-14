@@ -53,6 +53,8 @@ def main():
     accuracy = get_accuracy(test_set, predictions)
     
     print(f'Classification Accuracy: {accuracy:.2f}%')
+    
+    print(summaries[1])
 
 if __name__ == "__main__":
     main()

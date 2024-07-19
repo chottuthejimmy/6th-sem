@@ -2,3 +2,4 @@ test.*
 .vscode
 /*/.vscode
 /random
+/venv

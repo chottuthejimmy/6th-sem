@@ -1,5 +1,4 @@
 test.*
 .vscode
-/*/.vscode
 /random
-/venv
+/vnenv

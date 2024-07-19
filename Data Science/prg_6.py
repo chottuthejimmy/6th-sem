@@ -14,7 +14,7 @@ data = {
 }
 
 df = pd.DataFrame(data)
-df = pd.get_dummies(df, columns=['Price', 'Maintenance', 'Airbag'])
+df = pd.get_dummies(df, columns=['Price', 'Maintenance', 'Airbag']) # convert the categorical data into numerical data
 
 X = df.drop('Profitable', axis=1)
 y = df['Profitable']

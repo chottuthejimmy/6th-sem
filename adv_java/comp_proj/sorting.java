@@ -1,5 +1,4 @@
-package java.comparators;
-
+package adv_java.comp_proj;
 // Introduction to Comparators in Java 8 with examples
 
 import java.util.ArrayList;
@@ -7,25 +6,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-class Student {
-    String name;
-    int age;
-    int marks;
-
-    public Student(String name, int age, int marks) {
-        this.name = name;
-        this.age = age;
-        this.marks = marks;
-    }
-
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", marks=" + marks +
-                '}';
-    }
-}
+import adv_java.comp_proj.Student;
 
 public class sorting {
     public static void main(String[] args) {
@@ -53,4 +34,6 @@ public class sorting {
 }
 
 // Output:
-// Sorting by name: [Student{name='Alice', age=20, marks=90}, Student{name='Bob', age=22, marks=80}, Student{name='Charlie', age=21, marks=95}, Student{name='David', age=23, marks=85}]
+// Sorting by name: [Student{name='Alice', age=20, marks=90},
+// Student{name='Bob', age=22, marks=80}, Student{name='Charlie', age=21,
+// marks=95}, Student{name='David', age=23, marks=85}]

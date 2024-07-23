@@ -27,7 +27,7 @@ class Student {
     }
 }
 
-public class introToComparators {
+public class sorting {
     public static void main(String[] args) {
         List<Student> students = new ArrayList<>();
         students.add(new Student("Alice", 20, 90));

@@ -6,7 +6,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import adv_java.comp_proj.Student;
 
 public class sorting {
     public static void main(String[] args) {
@@ -19,17 +18,17 @@ public class sorting {
         // Sorting by name
         Comparator<Student> nameComparator = Comparator.comparing(student -> student.name);
         Collections.sort(students, nameComparator);
-        System.out.println("Sorting by name: " + students);
+        System.out.println("Sorting by name: " + students + "\n");
 
         // Sorting by age
         Comparator<Student> ageComparator = Comparator.comparing(student -> student.age);
         Collections.sort(students, ageComparator);
-        System.out.println("Sorting by age: " + students);
+        System.out.println("Sorting by age: " + students + "\n");
 
         // Sorting by marks
         Comparator<Student> marksComparator = Comparator.comparing(student -> student.marks);
         Collections.sort(students, marksComparator);
-        System.out.println("Sorting by marks: " + students);
+        System.out.println("Sorting by marks: " + students + "\n");
     }
 }
 
